@@ -109,12 +109,12 @@ describe("move", () => {
   });
 
   describe("Obstacle", () => {
-    it("the rover is hitting North(n),coordinates: (0,0),move foward and encounter an obstacle(0,1)，stay put(0,0)", () => {
+    it("the rover is hitting North(n),coordinates: (0,0), move foward and encounter an obstacle at beginning(0,1), can't move to last coordinate ,stay put(0,0)", () => {
       addCommand(
         createRangeCommand({
           x: 200,
           y: 200,
-          obtacleList: [{ x: 0, y: -1 }],
+          obstacleList: [{ x: 0, y: -1 }],
         })
       );
       handleForward(rotationConst.North, { x: 0, y: 0 });
@@ -135,7 +135,7 @@ describe("move", () => {
         createRangeCommand({
           width: 200,
           height: 200,
-          obtacleList: [{ x: 0, y: 1 }],
+          obstacleList: [{ x: 0, y: 1 }],
         })
       );
       addInitCommand({ rotation: rotationConst.South });
