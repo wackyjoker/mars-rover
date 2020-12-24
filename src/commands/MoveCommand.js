@@ -11,7 +11,7 @@ export default class MoveCommand {
 
     const newPosition = this.getNewPosition();
 
-    if (map.isObstracle(this.getCheckPosition(newPosition))) {
+    if (map.isObstacle(this.getCheckPosition(newPosition))) {
       return true;
     }
 

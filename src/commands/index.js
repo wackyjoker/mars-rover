@@ -1,3 +1,8 @@
+import InitCommand from "./InitCommand";
+import RotationCommand from "./RotationCommand";
+import MoveCommand from "./MoveCommand";
+import RangeCommand from "./RangeCommand";
+
 export function createInitCommand(data) {
   return new InitCommand(data);
 }
