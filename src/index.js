@@ -1,23 +1,23 @@
-import { createCar } from "./Car";
+import { createRover } from "./Rover";
 import { createMarsMap } from "./MarsMap";
 
 export function exec() {
-  let car = createCar();
+  let rover = createRover();
   let map = createMarsMap();
-  execCommand(car, map);
-  return car.getData();
+  execCommand(rover, map);
+  return rover.getData();
 }
 
-function execCommand(car, map) {
+function execCommand(rover, map) {
   for (let index = 0; index < commandList.length; index++) {
     const command = commandList[index];
-    const result = handleExec(car, map, command);
+    const result = handleExec(rover, map, command);
     if (result) return;
   }
 }
 
-function handleExec(car, map, command) {
-  return command.exec(car, map);
+function handleExec(rover, map, command) {
+  return command.exec(rover, map);
 }
 
 let commandList = [];

@@ -4,7 +4,7 @@ const direction = {
   Left: -1,
   Right: 1,
 };
-export default class Car {
+export default class Rover {
   constructor() {}
 
   init(data) {
@@ -62,6 +62,6 @@ export default class Car {
   }
 }
 
-export function createCar() {
-  return new Car();
+export function createRover() {
+  return new Rover();
 }

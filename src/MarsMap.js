@@ -1,32 +1,32 @@
 export default class MarsMap {
   constructor() {
-    this.width = null;
-    this.height = null;
-    this.barrierList = [];
+    this.x = null;
+    this.y = null;
+    this.obstacleList = [];
   }
-  init(width, height) {
-    this.width = width;
-    this.height = height;
+  init(x, y) {
+    this.x = x;
+    this.y = y;
   }
 
-  putBarrier(position) {
+  putObstacle(position) {
     if (Array.isArray(position)) {
-      this.barrierList.push(...position);
+      this.obstacleList.push(...position);
     } else {
-      this.barrierList.push(position);
+      this.obstacleList.push(position);
     }
   }
 
-  isBarrier(position) {
-    return this.barrierList.some(({ x, y }) => {
+  isObstacle(position) {
+    return this.obstacleList.some(({ x, y }) => {
       return x === position.x && y === position.y;
     });
   }
 
   getRange() {
     return {
-      width: this.width,
-      height: this.height,
+      x: this.x,
+      y: this.y,
     };
   }
 }
