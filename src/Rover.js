@@ -1,5 +1,5 @@
 import { rotationConst } from "./const";
-const rotations = [rotationConst.North, rotationConst.South, rotationConst.East, rotationConst.West];
+const rotations = [rotationConst.North, rotationConst.East, rotationConst.South, rotationConst.West];
 const direction = {
   Left: -1,
   Right: 1,

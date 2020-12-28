@@ -25,6 +25,23 @@ export function addCommand(command) {
   commandList.push(command);
 }
 
+export function addCommandList(commands) {
+  const lowerCmd = commands.toLowerCase();
+  const regex = new RegExp("^[lrfb]*", "g");
+  const validator = regex.test(lowerCmd);
+  if (validator) {
+    console.log("the command is successfully added");
+    const commandList = commands.split("");
+    commandList.forEach((command) => {
+      addCommand(command);
+    });
+  } else {
+    console.log(
+      'something went wrong with the command, command can only contain Letters with "L" "R" "F" "B" or use lower case'
+    );
+  }
+}
+
 export function size() {
   return commandList.length;
 }

@@ -1,6 +1,5 @@
 import { clear, addCommand, exec, size, __RewireAPI__ as Main } from "../src/index";
 import { createInitCommand, createRotationCommand, createMoveCommand, createRangeCommand } from "../src/commands/index";
-
 import { rotationConst } from "../src/const";
 
 function createInitData() {
@@ -36,8 +35,8 @@ describe("Turn", () => {
   describe("Turn Right", () => {
     const expectToRight = handleDir("right");
 
-    it("After we give Turn Right command, from n to s", () => {
-      expectToRight(rotationConst.South);
+    it("After we give Turn Right command, from n to e", () => {
+      expectToRight(rotationConst.East);
     });
 
     it("Current Direction is  n,after we give Turn Right command，it turns w to n", () => {
@@ -47,8 +46,8 @@ describe("Turn", () => {
 
   describe("Turn Left", () => {
     const expectToLeft = handleDir("left");
-    it("After we give Turn Left command，it turns s to n", () => {
-      expectToLeft(rotationConst.North, { rotation: rotationConst.South });
+    it("After we give Turn Left command，it turns s to e", () => {
+      expectToLeft(rotationConst.East, { rotation: rotationConst.South });
     });
 
     it("Current direction is n ,after we give Turn Left command, it turns  n to w", () => {
