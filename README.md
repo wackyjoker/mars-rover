@@ -14,7 +14,7 @@ Launches the test in the console.<br />
 build a cross-browser supported JS code using babel <br/>
 transpile ES5+ Javascript to Browser Supported JS <br />
 
-### 'npm start'
+### `npm start`
 
 initially it will run <strong>node build/Play.js"</strong> using the script. <br />
 
